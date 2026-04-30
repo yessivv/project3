@@ -12,7 +12,7 @@ item.addEventListener("click",() => {
 });
 
 const UpdateDiv = ()=>{
-console.log('hii line 89');
+console.log('hii line 15');
     stars.forEach((item,index) => {
 if (index < result) item.classList.add('active');
 else item.classList.remove('active');
@@ -70,7 +70,6 @@ let activeCategory = 'all';
 
   let base64Image = null;
 
-  // Drag and drop
   dropZone.addEventListener("dragover", e => { e.preventDefault(); dropZone.classList.add("dragover"); });
   dropZone.addEventListener("dragleave", () => dropZone.classList.remove("dragover"));
   dropZone.addEventListener("drop", e => {
