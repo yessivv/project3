@@ -1,13 +1,3 @@
-const { google } = require('googleapis');
-const drive = google.drive({ version: 'v3', auth });
-
-async function uploadFile(fileName, content) {
-  await drive.files.create({
-    requestBody: { name: fileName, mimeType: 'application/json' },
-    media: { mimeType: 'application/json', body: JSON.stringify(content) },
-  });
-}
-
 const stars = document.querySelectorAll('#star');
 
 
@@ -22,7 +12,7 @@ item.addEventListener("click",() => {
 });
 
 const UpdateDiv = ()=>{
-console.log('hii line 89');
+console.log('hii line 15');
     stars.forEach((item,index) => {
 if (index < result) item.classList.add('active');
 else item.classList.remove('active');
