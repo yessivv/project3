@@ -1,18 +1,8 @@
-const { google } = require('googleapis');
-const drive = google.drive({ version: 'v3', auth });
-
-async function uploadFile(fileName, content) {
-  await drive.files.create({
-    requestBody: { name: fileName, mimeType: 'application/json' },
-    media: { mimeType: 'application/json', body: JSON.stringify(content) },
-  });
-}
-
 const stars = document.querySelectorAll('#star');
 
 
 let result = 0;
-
+ 
 stars.forEach((item,index) => {
 item.addEventListener("click",() => {
     console.log('you have clicked on a star: ',index + 1);
