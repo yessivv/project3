@@ -70,7 +70,6 @@ let activeCategory = 'all';
 
   let base64Image = null;
 
-  // Drag and drop
   dropZone.addEventListener("dragover", e => { e.preventDefault(); dropZone.classList.add("dragover"); });
   dropZone.addEventListener("dragleave", () => dropZone.classList.remove("dragover"));
   dropZone.addEventListener("drop", e => {
