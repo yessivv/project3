@@ -1,4 +1,3 @@
-
 const stars = document.querySelectorAll('#star');
 
 
@@ -13,7 +12,7 @@ item.addEventListener("click",() => {
 });
 
 const UpdateDiv = ()=>{
-console.log('hii line 89');
+console.log('hii line 15');
     stars.forEach((item,index) => {
 if (index < result) item.classList.add('active');
 else item.classList.remove('active');
