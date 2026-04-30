@@ -1,42 +1,3 @@
-const port = process.env.PORT || 3000;
-
-const CLIENT_ID = 'YOUR_CLIENT_ID';
-const API_KEY = 'AIzaSyBkYpIxrJh1yFPe4_GrjbT8UKuDFPOIqwY';
-const SCOPES = 'https://www.googleapis.com/auth/drive.readonly';
-
-// Initialize the API client
-async function initGoogleApi() {
-  await gapi.load('client', async () => {
-    await gapi.client.init({
-      apiKey: API_KEY,
-      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'],
-    });
-  });
-}
-
-// Sign in the user
-function signIn() {
-  const tokenClient = google.accounts.oauth2.initTokenClient({
-    client_id: CLIENT_ID,
-    scope: SCOPES,
-    callback: (response) => {
-      if (response.access_token) {
-        listFiles(); // Proceed after auth
-      }
-    },
-  });
-  tokenClient.requestAccessToken();
-}
-
-// List files from Drive
-async function listFiles() {
-  const response = await gapi.client.drive.files.list({
-    pageSize: 10,
-    fields: 'files(id, name, mimeType)',
-  });
-  console.log(response.result.files);
-}
-
 
 const stars = document.querySelectorAll('#star');
 
@@ -110,7 +71,6 @@ let activeCategory = 'all';
 
   let base64Image = null;
 
-  // Drag and drop
   dropZone.addEventListener("dragover", e => { e.preventDefault(); dropZone.classList.add("dragover"); });
   dropZone.addEventListener("dragleave", () => dropZone.classList.remove("dragover"));
   dropZone.addEventListener("drop", e => {
