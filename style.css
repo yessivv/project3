@@ -2,31 +2,29 @@
 box-sizing: border-box;
 margin: 0;
 padding: 0;
-font-family: 'MyCustomFont';
+font-family: "pt-mono", monospace;
+
 }
 
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('fonts/MaaxMonoTrial-Regular.otf') format('truetype');
-}
 
 body {
     padding: 1rem;
 }
 
 h1 {
-    font-family: 'MyCustomFont';
-    letter-spacing: -3px;
+    font-family: "pt-mono", monospace;
+    letter-spacing: -2px;
     padding: 15px; 
     font-size: 50px;
     text-align: center;
 }
 
 h2 {
-    font-family: 'MyCustomFont';
-    letter-spacing: -3px;
+   font-family: "pt-mono", monospace;
+    letter-spacing: -2px;
     padding: 15px; 
-    font-size: 18px;
+    line-height: 17px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -295,4 +293,8 @@ img {
 
 #star {
  font-size: 50px;
+}
+
+iframe {
+  display: none;
 }
